@@ -1,4 +1,4 @@
-
+// NAV
 $('.burgerIcon').hover(function() {
     TweenMax.to('.burgerLine:first-child', 0.2, { x: -10 });
     TweenMax.to('.burgerLine:last-child', 0.2, { x: 10 });
@@ -22,3 +22,9 @@ $('.burgerIcon').click(function() {
 $('.closeButton').click(function() {
     tlMenu.reverse(0);
 });
+
+// HERO SECTION
+
+TweenMax.fromTo('#hero h1', 0.6, { y: 80, opacity: 0 }, { y: 0, opacity: 1, delay: 1});
+
+TweenMax.fromTo('#hero .learnMoreButton', 0.6, { y: 80, opacity: 0}, { y: 0, opacity: 1, delay: 1.6, ease:Back.easeOut});
