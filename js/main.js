@@ -52,3 +52,8 @@ function() {
     TweenMax.to($(this).find('.serviceBoxInner'), 0.5, { y: 200, opacity: 0 })
 }
 );
+
+// COG section
+
+TweenMax.to('.cogLeft', 8, { rotation: 360, repeat: -1, ease: Linear.easeNone });
+TweenMax.to('.cogRight', 8, { rotation: -360, repeat: -1, ease: Linear.easeNone });
