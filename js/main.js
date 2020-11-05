@@ -28,3 +28,27 @@ $('.closeButton').click(function() {
 TweenMax.fromTo('#hero h1', 0.6, { y: 80, opacity: 0 }, { y: 0, opacity: 1, delay: 1});
 
 TweenMax.fromTo('#hero .learnMoreButton', 0.6, { y: 80, opacity: 0}, { y: 0, opacity: 1, delay: 1.6, ease:Back.easeOut});
+
+// Four column section
+
+$('.fourColItem').hover(function() {
+    TweenMax.to($(this), 0.5, { y:-10, scale: 1.03});
+    TweenMax.to($(this), 0.5, { boxShadow: 'box-shadow: 0 0 20px rgba(0,0,0,0.36); ' });
+},
+function() {
+    TweenMax.to($(this), 0.5, { y:0, scale: 1});
+    TweenMax.to($(this), 0.5, { boxShadow: 'box-shadow: 0 0 20px rgba(0,0,0,0.06); ' });
+}
+);
+
+// SERVICE section
+
+TweenMax.set('.serviceBoxInner', { y: 200, opacity: 0 });
+
+$('.serviceBox').hover(function() {
+    TweenMax.to($(this).find('.serviceBoxInner'), 0.5, { y: 0, opacity: 1, ease: Power2.easeOut })
+},
+function() {
+    TweenMax.to($(this).find('.serviceBoxInner'), 0.5, { y: 200, opacity: 0 })
+}
+);
